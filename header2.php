@@ -75,7 +75,7 @@ while ($tiap_kategori = $ambil_kategori -> fetch_assoc())
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 									<div class="modal-body">
-										<h3 class="text-center">Rindang 84 Juwana</h3>
+										<h3 class="text-center">Aditya Nusa Syahputra</h3>
 										<form method="post">
 											<div class="mb-3">
 												<label class="form-label fw-bold">USERNAME</label>
