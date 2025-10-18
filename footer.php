@@ -6,10 +6,7 @@
                 <h3 class="footer-title">Jejak<span>Literasi</span></h3>
                 <p class="footer-text">Temukan dunia literasi yang tak terbatas. Destinasi utama Anda untuk buku-buku berkualitas dan pengetahuan yang menginspirasi.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-goodreads"></i></a>
                 </div>
             </div>
             <div class="footer-section">
