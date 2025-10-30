@@ -786,7 +786,7 @@ while ($row =  $ambil_pt->fetch_assoc()) {
 <section class="newsletter-section">
     <div class="container">
         <div class="newsletter-content">
-            <h2 class="newsletter-title">Bergabung Kengan Komunitas Pembaca Kami</h2>
+            <h2 class="newsletter-title">Bergabung Dengan Komunitas Pembaca Kami</h2>
             <p class="newsletter-text">Berlangganan untuk mendapatkan pembaruan tentang rilis baru, acara penulis, dan rekomendasi buku eksklusif.</p>
             <form class="newsletter-form">
                 <input type="email" class="newsletter-input" placeholder="Enter your email address">
