@@ -56,7 +56,7 @@ while ($row =  $ambil_pt->fetch_assoc()) {
 </head>
 <style>
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/file/bg1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/file/bg.jpg');
     background-size: cover;
     background-position: center;
     height: 85vh;
