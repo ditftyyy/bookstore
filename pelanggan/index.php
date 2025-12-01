@@ -621,7 +621,7 @@ while ($row =  $ambil_pt->fetch_assoc()) {
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="<?php echo ($key + 1) * 100; ?>">
                 <a href="produk.php?idk=<?php echo $value['id_kategori']; ?>" class="text-decoration-none">
                     <div class="category-card">
-                        <img src="../assets/file/category/kategori.jpg" alt="<?php echo $value['nama_kategori']; ?>" class="category-image">
+                        <img src="../assets/file/cover1.jpg" alt="<?php echo $value['nama_kategori']; ?>" class="category-image">
                         <div class="category-overlay">
                             <h3 class="category-title"><?php echo $value['nama_kategori']; ?></h3>
                             <p class="category-description">Jelajahi Koleksi Kami</p>

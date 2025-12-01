@@ -654,7 +654,7 @@ while ($row =  $ambil_pt->fetch_assoc()) {
             <?php foreach ($top_kategori as $key => $value): ?>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="<?php echo ($key + 1) * 100; ?>">
                 <div class="category-card">
-                    <img src="assets/file/category/latar.jpg" alt="<?php echo $value['nama_kategori']; ?>" class="category-image">
+                    <img src="assets/file/cover2.jpg" alt="<?php echo $value['nama_kategori']; ?>" class="category-image">
                     <div class="category-overlay">
                         <h3 class="category-title"><?php echo $value['nama_kategori']; ?></h3>
                         <p class="category-description"><?php echo $value['total_produk']; ?> buku yang tersedia</p>

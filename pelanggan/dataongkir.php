@@ -44,28 +44,28 @@ try {
     // Tarif dasar
     $tarif = 15000; // default dalam provinsi
     if ($asal['prov'] != $tujuan['prov']) {
-        $tarif = 25000; // beda provinsi, satu pulau
+        $tarif = 20000; // beda provinsi, satu pulau
         if ($asal['pulau'] != $tujuan['pulau']) {
-            $tarif = 35000; // beda pulau
+            $tarif = 22000; // beda pulau
         }
     }
 
     // Ongkir per ekspedisi
     $ongkir_manual = array(
-        'jne' => array(
-            array('service' => 'REG', 'cost' => array(array('value' => $tarif + ($berat_kg-1)*5000, 'etd' => '2-4'))),
-            array('service' => 'YES', 'cost' => array(array('value' => $tarif + 10000 + ($berat_kg-1)*7000, 'etd' => '1-2'))),
-            array('service' => 'OKE', 'cost' => array(array('value' => $tarif - 3000 + ($berat_kg-1)*4000, 'etd' => '4-6')))
+        'Anteraja' => array(
+            // array('service' => 'REG', 'cost' => array(array('value' => $tarif + ($berat_kg-1)*5000, 'etd' => '2-4'))),
+            // array('service' => 'YES', 'cost' => array(array('value' => $tarif + 10000 + ($berat_kg-1)*7000, 'etd' => '1-2'))),
+            array('service' => 'Anteraja Reguler', 'cost' => array(array('value' => $tarif - 3000 + ($berat_kg-1)*3000, 'etd' => '4-6')))
         ),
-        'tiki' => array(
-            array('service' => 'REG', 'cost' => array(array('value' => $tarif + 2000 + ($berat_kg-1)*6000, 'etd' => '2-4'))),
-            array('service' => 'ECO', 'cost' => array(array('value' => $tarif - 2000 + ($berat_kg-1)*4000, 'etd' => '4-7'))),
-            array('service' => 'ONS', 'cost' => array(array('value' => $tarif + 15000 + ($berat_kg-1)*10000, 'etd' => '1')))
+        'Pos Indonesia' => array(
+            // array('service' => 'REG', 'cost' => array(array('value' => $tarif + 2000 + ($berat_kg-1)*6000, 'etd' => '2-4'))),
+            array('service' => 'PKH Paket Pos', 'cost' => array(array('value' => $tarif - 3000 + ($berat_kg-1)*3000, 'etd' => '4-7'))),
+            array('service' => 'Express Paket Nasional', 'cost' => array(array('value' => $tarif + 5000 + ($berat_kg-1)*5000, 'etd' => '3-6')))
         ),
-        'pos' => array(
-            array('service' => 'Paket Kilat Khusus', 'cost' => array(array('value' => $tarif + 5000 + ($berat_kg-1)*7000, 'etd' => '1-3'))),
-            array('service' => 'Paket Kilat', 'cost' => array(array('value' => $tarif + ($berat_kg-1)*5000, 'etd' => '2-5'))),
-            array('service' => 'Paket Reguler', 'cost' => array(array('value' => $tarif - 2000 + ($berat_kg-1)*4000, 'etd' => '4-8')))
+        'JNE' => array(
+            // array('service' => 'Paket Kilat Khusus', 'cost' => array(array('value' => $tarif + 5000 + ($berat_kg-1)*7000, 'etd' => '1-3'))),
+            // array('service' => 'Paket Kilat', 'cost' => array(array('value' => $tarif + ($berat_kg-1)*5000, 'etd' => '2-5'))),
+            array('service' => 'Paket Reguler', 'cost' => array(array('value' => $tarif - 3000 + ($berat_kg-1)*3000, 'etd' => '4-8')))
         )
     );
     $dt_ongkir = isset($ongkir_manual[$ekspedisi]) ? $ongkir_manual[$ekspedisi] : $ongkir_manual['jne'];

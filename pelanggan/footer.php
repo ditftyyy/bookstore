@@ -4,10 +4,10 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3 class="footer-title">Twingkle</h3>
-                <p class="footer-text">Temukan keanggunan abadi di setiap produknya. Destinasi utama untuk aksesori premium.</p>
+                <p class="footer-text">Temukan keanggunan abadi di setiap produknya. Destinasi utama untuk aksesoris premium.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/gramediajember?igsh=ZHcwMnI4OTUwM3Q0" class="social-link"><i class="bi bi-instagram"></i></a>
-                    <a href="https://wa.me/6283837501316" class="social-link"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/6285174330118" class="social-link"><i class="bi bi-whatsapp"></i></a>
                     <a href="https://goo.gl/maps/qHyqvnaYDRbosq8x5" class="social-link"><i class="bi bi-geo-alt-fill"></i></a>
                 </div>
             </div>

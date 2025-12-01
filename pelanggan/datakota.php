@@ -47,19 +47,19 @@ try {
             array('city_id' => '450', 'city_name' => 'Probolinggo', 'postal_code' => '67211', 'type' => 'Kota'),
             array('city_id' => '451', 'city_name' => 'Madiun', 'postal_code' => '63111', 'type' => 'Kota')
         ),
-        '5' => array( // Banten
-            array('city_id' => '106', 'city_name' => 'Serang', 'postal_code' => '42111', 'type' => 'Kota'),
-            array('city_id' => '107', 'city_name' => 'Tangerang', 'postal_code' => '15111', 'type' => 'Kota'),
-            array('city_id' => '108', 'city_name' => 'Cilegon', 'postal_code' => '42411', 'type' => 'Kota'),
-            array('city_id' => '109', 'city_name' => 'Tangerang Selatan', 'postal_code' => '15411', 'type' => 'Kota')
-        ),
-        '6' => array( // DI Yogyakarta
-            array('city_id' => '501', 'city_name' => 'Yogyakarta', 'postal_code' => '55111', 'type' => 'Kota'),
-            array('city_id' => '502', 'city_name' => 'Sleman', 'postal_code' => '55511', 'type' => 'Kabupaten'),
-            array('city_id' => '503', 'city_name' => 'Bantul', 'postal_code' => '55711', 'type' => 'Kabupaten'),
-            array('city_id' => '504', 'city_name' => 'Kulon Progo', 'postal_code' => '55611', 'type' => 'Kabupaten'),
-            array('city_id' => '505', 'city_name' => 'Gunung Kidul', 'postal_code' => '55811', 'type' => 'Kabupaten')
-        ),
+        // '5' => array( // Banten
+        //     array('city_id' => '106', 'city_name' => 'Serang', 'postal_code' => '42111', 'type' => 'Kota'),
+        //     array('city_id' => '107', 'city_name' => 'Tangerang', 'postal_code' => '15111', 'type' => 'Kota'),
+        //     array('city_id' => '108', 'city_name' => 'Cilegon', 'postal_code' => '42411', 'type' => 'Kota'),
+        //     array('city_id' => '109', 'city_name' => 'Tangerang Selatan', 'postal_code' => '15411', 'type' => 'Kota')
+        // ),
+        // '6' => array( // DI Yogyakarta
+        //     array('city_id' => '501', 'city_name' => 'Yogyakarta', 'postal_code' => '55111', 'type' => 'Kota'),
+        //     array('city_id' => '502', 'city_name' => 'Sleman', 'postal_code' => '55511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '503', 'city_name' => 'Bantul', 'postal_code' => '55711', 'type' => 'Kabupaten'),
+        //     array('city_id' => '504', 'city_name' => 'Kulon Progo', 'postal_code' => '55611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '505', 'city_name' => 'Gunung Kidul', 'postal_code' => '55811', 'type' => 'Kabupaten')
+        // ),
         '7' => array( // Sumatera Utara
             array('city_id' => '201', 'city_name' => 'Medan', 'postal_code' => '20111', 'type' => 'Kota'),
             array('city_id' => '202', 'city_name' => 'Binjai', 'postal_code' => '20711', 'type' => 'Kota'),
@@ -84,57 +84,57 @@ try {
             array('city_id' => '404', 'city_name' => 'Lubuklinggau', 'postal_code' => '31611', 'type' => 'Kota'),
             array('city_id' => '405', 'city_name' => 'Baturaja', 'postal_code' => '32111', 'type' => 'Kabupaten')
         ),
-        '10' => array( // Lampung
-            array('city_id' => '501', 'city_name' => 'Bandar Lampung', 'postal_code' => '35111', 'type' => 'Kota'),
-            array('city_id' => '502', 'city_name' => 'Metro', 'postal_code' => '34111', 'type' => 'Kota'),
-            array('city_id' => '503', 'city_name' => 'Kotabumi', 'postal_code' => '34511', 'type' => 'Kabupaten'),
-            array('city_id' => '504', 'city_name' => 'Kalianda', 'postal_code' => '35511', 'type' => 'Kabupaten'),
-            array('city_id' => '505', 'city_name' => 'Liwa', 'postal_code' => '34811', 'type' => 'Kabupaten')
-        ),
-        '11' => array( // Riau
-            array('city_id' => '601', 'city_name' => 'Pekanbaru', 'postal_code' => '28111', 'type' => 'Kota'),
-            array('city_id' => '602', 'city_name' => 'Dumai', 'postal_code' => '28811', 'type' => 'Kota'),
-            array('city_id' => '603', 'city_name' => 'Bengkalis', 'postal_code' => '28711', 'type' => 'Kabupaten'),
-            array('city_id' => '604', 'city_name' => 'Siak', 'postal_code' => '28611', 'type' => 'Kabupaten'),
-            array('city_id' => '605', 'city_name' => 'Rengat', 'postal_code' => '29311', 'type' => 'Kabupaten')
-        ),
-        '12' => array( // Kepulauan Riau
-            array('city_id' => '701', 'city_name' => 'Tanjung Pinang', 'postal_code' => '29111', 'type' => 'Kota'),
-            array('city_id' => '702', 'city_name' => 'Batam', 'postal_code' => '29411', 'type' => 'Kota'),
-            array('city_id' => '703', 'city_name' => 'Tanjung Balai Karimun', 'postal_code' => '29611', 'type' => 'Kabupaten'),
-            array('city_id' => '704', 'city_name' => 'Ranai', 'postal_code' => '29711', 'type' => 'Kabupaten'),
-            array('city_id' => '705', 'city_name' => 'Daik', 'postal_code' => '29811', 'type' => 'Kabupaten')
-        ),
-        '13' => array( // Jambi
-            array('city_id' => '801', 'city_name' => 'Jambi', 'postal_code' => '36111', 'type' => 'Kota'),
-            array('city_id' => '802', 'city_name' => 'Sungai Penuh', 'postal_code' => '37111', 'type' => 'Kota'),
-            array('city_id' => '803', 'city_name' => 'Muara Bulian', 'postal_code' => '36611', 'type' => 'Kabupaten'),
-            array('city_id' => '804', 'city_name' => 'Muara Tebo', 'postal_code' => '37511', 'type' => 'Kabupaten'),
-            array('city_id' => '805', 'city_name' => 'Sarolangun', 'postal_code' => '37411', 'type' => 'Kabupaten')
-        ),
-        '14' => array( // Bengkulu
-            array('city_id' => '901', 'city_name' => 'Bengkulu', 'postal_code' => '38111', 'type' => 'Kota'),
-            array('city_id' => '902', 'city_name' => 'Curup', 'postal_code' => '39111', 'type' => 'Kabupaten'),
-            array('city_id' => '903', 'city_name' => 'Manna', 'postal_code' => '38511', 'type' => 'Kabupaten'),
-            array('city_id' => '904', 'city_name' => 'Tais', 'postal_code' => '38711', 'type' => 'Kabupaten'),
-            array('city_id' => '905', 'city_name' => 'Argamakmur', 'postal_code' => '38611', 'type' => 'Kabupaten')
-        ),
-        '15' => array( // Bangka Belitung
-            array('city_id' => '1001', 'city_name' => 'Pangkalpinang', 'postal_code' => '33111', 'type' => 'Kota'),
-            array('city_id' => '1002', 'city_name' => 'Tanjung Pandan', 'postal_code' => '33411', 'type' => 'Kabupaten'),
-            array('city_id' => '1003', 'city_name' => 'Manggar', 'postal_code' => '33511', 'type' => 'Kabupaten'),
-            array('city_id' => '1004', 'city_name' => 'Koba', 'postal_code' => '33611', 'type' => 'Kabupaten'),
-            array('city_id' => '1005', 'city_name' => 'Toboali', 'postal_code' => '33711', 'type' => 'Kabupaten')
-        ),
-        '16' => array( // Aceh
-            array('city_id' => '1101', 'city_name' => 'Banda Aceh', 'postal_code' => '23111', 'type' => 'Kota'),
-            array('city_id' => '1102', 'city_name' => 'Langsa', 'postal_code' => '24411', 'type' => 'Kota'),
-            array('city_id' => '1103', 'city_name' => 'Lhokseumawe', 'postal_code' => '24311', 'type' => 'Kota'),
-            array('city_id' => '1104', 'city_name' => 'Sabang', 'postal_code' => '23511', 'type' => 'Kota'),
-            array('city_id' => '1105', 'city_name' => 'Subulussalam', 'postal_code' => '24711', 'type' => 'Kota'),
-            array('city_id' => '1106', 'city_name' => 'Takengon', 'postal_code' => '24511', 'type' => 'Kabupaten'),
-            array('city_id' => '1107', 'city_name' => 'Meulaboh', 'postal_code' => '23611', 'type' => 'Kabupaten')
-        ),
+        // '10' => array( // Lampung
+        //     array('city_id' => '501', 'city_name' => 'Bandar Lampung', 'postal_code' => '35111', 'type' => 'Kota'),
+        //     array('city_id' => '502', 'city_name' => 'Metro', 'postal_code' => '34111', 'type' => 'Kota'),
+        //     array('city_id' => '503', 'city_name' => 'Kotabumi', 'postal_code' => '34511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '504', 'city_name' => 'Kalianda', 'postal_code' => '35511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '505', 'city_name' => 'Liwa', 'postal_code' => '34811', 'type' => 'Kabupaten')
+        // ),
+        // '11' => array( // Riau
+        //     array('city_id' => '601', 'city_name' => 'Pekanbaru', 'postal_code' => '28111', 'type' => 'Kota'),
+        //     array('city_id' => '602', 'city_name' => 'Dumai', 'postal_code' => '28811', 'type' => 'Kota'),
+        //     array('city_id' => '603', 'city_name' => 'Bengkalis', 'postal_code' => '28711', 'type' => 'Kabupaten'),
+        //     array('city_id' => '604', 'city_name' => 'Siak', 'postal_code' => '28611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '605', 'city_name' => 'Rengat', 'postal_code' => '29311', 'type' => 'Kabupaten')
+        // ),
+        // '12' => array( // Kepulauan Riau
+        //     array('city_id' => '701', 'city_name' => 'Tanjung Pinang', 'postal_code' => '29111', 'type' => 'Kota'),
+        //     array('city_id' => '702', 'city_name' => 'Batam', 'postal_code' => '29411', 'type' => 'Kota'),
+        //     array('city_id' => '703', 'city_name' => 'Tanjung Balai Karimun', 'postal_code' => '29611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '704', 'city_name' => 'Ranai', 'postal_code' => '29711', 'type' => 'Kabupaten'),
+        //     array('city_id' => '705', 'city_name' => 'Daik', 'postal_code' => '29811', 'type' => 'Kabupaten')
+        // ),
+        // '13' => array( // Jambi
+        //     array('city_id' => '801', 'city_name' => 'Jambi', 'postal_code' => '36111', 'type' => 'Kota'),
+        //     array('city_id' => '802', 'city_name' => 'Sungai Penuh', 'postal_code' => '37111', 'type' => 'Kota'),
+        //     array('city_id' => '803', 'city_name' => 'Muara Bulian', 'postal_code' => '36611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '804', 'city_name' => 'Muara Tebo', 'postal_code' => '37511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '805', 'city_name' => 'Sarolangun', 'postal_code' => '37411', 'type' => 'Kabupaten')
+        // ),
+        // '14' => array( // Bengkulu
+        //     array('city_id' => '901', 'city_name' => 'Bengkulu', 'postal_code' => '38111', 'type' => 'Kota'),
+        //     array('city_id' => '902', 'city_name' => 'Curup', 'postal_code' => '39111', 'type' => 'Kabupaten'),
+        //     array('city_id' => '903', 'city_name' => 'Manna', 'postal_code' => '38511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '904', 'city_name' => 'Tais', 'postal_code' => '38711', 'type' => 'Kabupaten'),
+        //     array('city_id' => '905', 'city_name' => 'Argamakmur', 'postal_code' => '38611', 'type' => 'Kabupaten')
+        // ),
+        // '15' => array( // Bangka Belitung
+        //     array('city_id' => '1001', 'city_name' => 'Pangkalpinang', 'postal_code' => '33111', 'type' => 'Kota'),
+        //     array('city_id' => '1002', 'city_name' => 'Tanjung Pandan', 'postal_code' => '33411', 'type' => 'Kabupaten'),
+        //     array('city_id' => '1003', 'city_name' => 'Manggar', 'postal_code' => '33511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '1004', 'city_name' => 'Koba', 'postal_code' => '33611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '1005', 'city_name' => 'Toboali', 'postal_code' => '33711', 'type' => 'Kabupaten')
+        // ),
+        // '16' => array( // Aceh
+        //     array('city_id' => '1101', 'city_name' => 'Banda Aceh', 'postal_code' => '23111', 'type' => 'Kota'),
+        //     array('city_id' => '1102', 'city_name' => 'Langsa', 'postal_code' => '24411', 'type' => 'Kota'),
+        //     array('city_id' => '1103', 'city_name' => 'Lhokseumawe', 'postal_code' => '24311', 'type' => 'Kota'),
+        //     array('city_id' => '1104', 'city_name' => 'Sabang', 'postal_code' => '23511', 'type' => 'Kota'),
+        //     array('city_id' => '1105', 'city_name' => 'Subulussalam', 'postal_code' => '24711', 'type' => 'Kota'),
+        //     array('city_id' => '1106', 'city_name' => 'Takengon', 'postal_code' => '24511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '1107', 'city_name' => 'Meulaboh', 'postal_code' => '23611', 'type' => 'Kabupaten')
+        // ),
         '17' => array( // Kalimantan Barat
             array('city_id' => '1201', 'city_name' => 'Pontianak', 'postal_code' => '78111', 'type' => 'Kota'),
             array('city_id' => '1202', 'city_name' => 'Singkawang', 'postal_code' => '79111', 'type' => 'Kota'),
@@ -207,13 +207,13 @@ try {
             array('city_id' => '2005', 'city_name' => 'Wangi-Wangi', 'postal_code' => '93811', 'type' => 'Kabupaten'),
             array('city_id' => '2006', 'city_name' => 'Lasusua', 'postal_code' => '93911', 'type' => 'Kabupaten')
         ),
-        '26' => array( // Gorontalo
-            array('city_id' => '2101', 'city_name' => 'Gorontalo', 'postal_code' => '96111', 'type' => 'Kota'),
-            array('city_id' => '2102', 'city_name' => 'Limboto', 'postal_code' => '96211', 'type' => 'Kabupaten'),
-            array('city_id' => '2103', 'city_name' => 'Tilamuta', 'postal_code' => '96311', 'type' => 'Kabupaten'),
-            array('city_id' => '2104', 'city_name' => 'Suwawa', 'postal_code' => '96511', 'type' => 'Kabupaten'),
-            array('city_id' => '2105', 'city_name' => 'Marisa', 'postal_code' => '96411', 'type' => 'Kabupaten')
-        ),
+        // '26' => array( // Gorontalo
+        //     array('city_id' => '2101', 'city_name' => 'Gorontalo', 'postal_code' => '96111', 'type' => 'Kota'),
+        //     array('city_id' => '2102', 'city_name' => 'Limboto', 'postal_code' => '96211', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2103', 'city_name' => 'Tilamuta', 'postal_code' => '96311', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2104', 'city_name' => 'Suwawa', 'postal_code' => '96511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2105', 'city_name' => 'Marisa', 'postal_code' => '96411', 'type' => 'Kabupaten')
+        // ),
         '27' => array( // Sulawesi Barat
             array('city_id' => '2201', 'city_name' => 'Mamuju', 'postal_code' => '91511', 'type' => 'Kota'),
             array('city_id' => '2202', 'city_name' => 'Mamasa', 'postal_code' => '91311', 'type' => 'Kabupaten'),
@@ -221,14 +221,14 @@ try {
             array('city_id' => '2204', 'city_name' => 'Majene', 'postal_code' => '91411', 'type' => 'Kabupaten'),
             array('city_id' => '2205', 'city_name' => 'Polewali', 'postal_code' => '91311', 'type' => 'Kabupaten')
         ),
-        '28' => array( // Maluku
-            array('city_id' => '2301', 'city_name' => 'Ambon', 'postal_code' => '97111', 'type' => 'Kota'),
-            array('city_id' => '2302', 'city_name' => 'Tual', 'postal_code' => '97611', 'type' => 'Kota'),
-            array('city_id' => '2303', 'city_name' => 'Masohi', 'postal_code' => '97511', 'type' => 'Kabupaten'),
-            array('city_id' => '2304', 'city_name' => 'Namlea', 'postal_code' => '97511', 'type' => 'Kabupaten'),
-            array('city_id' => '2305', 'city_name' => 'Dobo', 'postal_code' => '97611', 'type' => 'Kabupaten'),
-            array('city_id' => '2306', 'city_name' => 'Saumlaki', 'postal_code' => '97611', 'type' => 'Kabupaten')
-        ),
+        // '28' => array( // Maluku
+        //     array('city_id' => '2301', 'city_name' => 'Ambon', 'postal_code' => '97111', 'type' => 'Kota'),
+        //     array('city_id' => '2302', 'city_name' => 'Tual', 'postal_code' => '97611', 'type' => 'Kota'),
+        //     array('city_id' => '2303', 'city_name' => 'Masohi', 'postal_code' => '97511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2304', 'city_name' => 'Namlea', 'postal_code' => '97511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2305', 'city_name' => 'Dobo', 'postal_code' => '97611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2306', 'city_name' => 'Saumlaki', 'postal_code' => '97611', 'type' => 'Kabupaten')
+        // ),
         '29' => array( // Maluku Utara
             array('city_id' => '2401', 'city_name' => 'Ternate', 'postal_code' => '97711', 'type' => 'Kota'),
             array('city_id' => '2402', 'city_name' => 'Tidore', 'postal_code' => '97811', 'type' => 'Kota'),
@@ -236,22 +236,22 @@ try {
             array('city_id' => '2404', 'city_name' => 'Weda', 'postal_code' => '97811', 'type' => 'Kabupaten'),
             array('city_id' => '2405', 'city_name' => 'Sanana', 'postal_code' => '97611', 'type' => 'Kabupaten')
         ),
-        '30' => array( // Papua
-            array('city_id' => '2501', 'city_name' => 'Jayapura', 'postal_code' => '99111', 'type' => 'Kota'),
-            array('city_id' => '2502', 'city_name' => 'Merauke', 'postal_code' => '99611', 'type' => 'Kabupaten'),
-            array('city_id' => '2503', 'city_name' => 'Wamena', 'postal_code' => '99511', 'type' => 'Kabupaten'),
-            array('city_id' => '2504', 'city_name' => 'Biak', 'postal_code' => '98111', 'type' => 'Kabupaten'),
-            array('city_id' => '2505', 'city_name' => 'Serui', 'postal_code' => '98211', 'type' => 'Kabupaten'),
-            array('city_id' => '2506', 'city_name' => 'Timika', 'postal_code' => '99911', 'type' => 'Kabupaten')
-        ),
-        '31' => array( // Papua Barat
-            array('city_id' => '2601', 'city_name' => 'Manokwari', 'postal_code' => '98311', 'type' => 'Kabupaten'),
-            array('city_id' => '2602', 'city_name' => 'Sorong', 'postal_code' => '98411', 'type' => 'Kota'),
-            array('city_id' => '2603', 'city_name' => 'Fakfak', 'postal_code' => '98611', 'type' => 'Kabupaten'),
-            array('city_id' => '2604', 'city_name' => 'Kaimana', 'postal_code' => '98711', 'type' => 'Kabupaten'),
-            array('city_id' => '2605', 'city_name' => 'Bintuni', 'postal_code' => '98511', 'type' => 'Kabupaten'),
-            array('city_id' => '2606', 'city_name' => 'Ransiki', 'postal_code' => '98311', 'type' => 'Kabupaten')
-        ),
+        // '30' => array( // Papua
+        //     array('city_id' => '2501', 'city_name' => 'Jayapura', 'postal_code' => '99111', 'type' => 'Kota'),
+        //     array('city_id' => '2502', 'city_name' => 'Merauke', 'postal_code' => '99611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2503', 'city_name' => 'Wamena', 'postal_code' => '99511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2504', 'city_name' => 'Biak', 'postal_code' => '98111', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2505', 'city_name' => 'Serui', 'postal_code' => '98211', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2506', 'city_name' => 'Timika', 'postal_code' => '99911', 'type' => 'Kabupaten')
+        // ),
+        // '31' => array( // Papua Barat
+        //     array('city_id' => '2601', 'city_name' => 'Manokwari', 'postal_code' => '98311', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2602', 'city_name' => 'Sorong', 'postal_code' => '98411', 'type' => 'Kota'),
+        //     array('city_id' => '2603', 'city_name' => 'Fakfak', 'postal_code' => '98611', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2604', 'city_name' => 'Kaimana', 'postal_code' => '98711', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2605', 'city_name' => 'Bintuni', 'postal_code' => '98511', 'type' => 'Kabupaten'),
+        //     array('city_id' => '2606', 'city_name' => 'Ransiki', 'postal_code' => '98311', 'type' => 'Kabupaten')
+        // ),
         '32' => array( // Bali
             array('city_id' => '2701', 'city_name' => 'Denpasar', 'postal_code' => '80111', 'type' => 'Kota'),
             array('city_id' => '2702', 'city_name' => 'Singaraja', 'postal_code' => '81111', 'type' => 'Kabupaten'),
