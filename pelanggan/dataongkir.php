@@ -42,11 +42,11 @@ try {
     $berat_kg = max(1, ceil($total_berat / 1000));
 
     // Tarif dasar
-    $tarif = 15000; // default dalam provinsi
+    $tarif = 5000; // default dalam provinsi
     if ($asal['prov'] != $tujuan['prov']) {
-        $tarif = 20000; // beda provinsi, satu pulau
+        $tarif = 10000; // beda provinsi, satu pulau
         if ($asal['pulau'] != $tujuan['pulau']) {
-            $tarif = 22000; // beda pulau
+            $tarif = 15000; // beda pulau
         }
     }
 

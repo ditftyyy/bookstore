@@ -1,13 +1,15 @@
 <?php 
 include "header.php";
-//menampilkan riwayat pembelian dari pelanggan yang login
-$ambil_pembelian = $koneksi -> query("SELECT * FROM pembelian WHERE id_pelanggan = '$id_pelanggan'  ORDER BY id_pembelian DESC");
+
+// Menampilkan riwayat pembelian dari pelanggan yang login
+$ambil_pembelian = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan = '$id_pelanggan' ORDER BY id_pembelian DESC");
 $pembelian = array();
-while ($tiap_pembelian = $ambil_pembelian -> fetch_assoc()) 
+while ($tiap_pembelian = $ambil_pembelian->fetch_assoc()) 
 {
-	$pembelian[] = $tiap_pembelian;
+    $pembelian[] = $tiap_pembelian;
 }
 ?>
+
 <style>
 .order-history {
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
@@ -39,11 +41,12 @@ while ($tiap_pembelian = $ambil_pembelian -> fetch_assoc())
 }
 .order-table th {
     font-weight: 500;
-    padding: 1.2rem;
+    padding: 1.2rem 0.8rem;
     border: none;
+    white-space: nowrap;
 }
 .order-table td {
-    padding: 1.2rem;
+    padding: 1.2rem 0.8rem;
     vertical-align: middle;
     border-color: #f0f0f0;
 }
@@ -74,14 +77,26 @@ while ($tiap_pembelian = $ambil_pembelian -> fetch_assoc())
     background: #f8d7da;
     color: #721c24;
 }
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+}
 .action-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border: none;
-    margin: 0.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+.action-btn i {
+    margin-right: 5px;
 }
 .btn-detail {
     background: var(--primary-color);
@@ -126,13 +141,46 @@ while ($tiap_pembelian = $ambil_pembelian -> fetch_assoc())
     font-size: 0.9rem;
     color: #666;
 }
+.order-id {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.total-amount {
+    font-weight: 600;
+    color: #28a745;
+}
+.date-cell {
+    min-width: 160px;
+}
+.method-cell {
+    text-transform: uppercase;
+    font-weight: 500;
+}
 @media (max-width: 768px) {
     .order-table {
         font-size: 0.9rem;
     }
+    .action-buttons {
+        min-width: 150px;
+    }
     .action-btn {
-        padding: 0.4rem 0.8rem;
+        padding: 0.4rem 0.6rem;
         font-size: 0.8rem;
+    }
+    .date-cell {
+        min-width: 140px;
+    }
+}
+@media (max-width: 576px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .order-table th,
+    .order-table td {
+        padding: 0.8rem 0.5rem;
+    }
+    .action-buttons {
+        min-width: 120px;
     }
 }
 </style>
@@ -144,109 +192,151 @@ while ($tiap_pembelian = $ambil_pembelian -> fetch_assoc())
             <p class="order-history-subtitle">Lacak Pesanan Anda Dan Status Nya Saat Ini</p>
         </div>
         <div class="table-responsive">
-            <table class="table order-table" id="testing">
+            <table class="table order-table">
                 <thead>
                     <tr>
-                        <th>ID Pesanan</th>
-                        <th>Tanggal</th>
-                        <th>Pembayaran Jatuh Tempo</th>
+                        <th>Pesanan</th>
+                        <th class="date-cell">Tanggal</th>
+                        <th class="date-cell">Jatuh Tempo</th>
                         <th>Total</th>
-                        <th>Metode Pembayaran</th>
+                        <th>Metode</th>
                         <th>Status</th>
                         <th>Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($pembelian as $key => $value): ?>
+                    <?php if (empty($pembelian)): ?>
                         <tr>
-                            <td>#<?php echo $value["id_pembelian"]; ?></td>
-                            <td><?php echo date("d M Y, H:i",strtotime($value["tanggal_pembelian"])); ?></td>
-                            <?php if ($value['metode_pembayaran']=="transfer"): ?>
-                            <td><?php echo date("d M Y, H:i",strtotime($value["batas_pembayaran"])); ?></td>
-                            <?php else: ?>
-                            <td class="payment-info">Pay on delivery</td>
-                            <?php endif ?>
-                            <td>Rp <?php echo number_format($value["total_pembelian"]); ?></td>
-                            <td><?php echo ucfirst($value["metode_pembayaran"]); ?></td>
-                            <td>
-                                <?php 
-                                $status_class = '';
-                                $status_label = '';
-                                switch($value["status_pembelian"]) {
-                                    case 'pending':
-                                        $status_class = 'status-pending';
-                                        $status_label = 'pending';
-                                        break;
-                                    case 'lunas':
-                                        $status_class = 'status-lunas';
-                                        $status_label = 'lunas';
-                                        break;
-                                    case 'kirim':
-                                        $status_class = 'status-kirim';
-                                        $status_label = 'dikirim';
-                                        break;
-                                    case 'selesai':
-                                        $status_class = 'status-selesai';
-                                        $status_label = 'selesai';
-                                        break;
-                                    case 'batal':
-                                        $status_class = 'status-batal';
-                                        $status_label = 'batal';
-                                        break;
-                                    default:
-                                        $status_class = 'status-pending';
-                                        $status_label = ucfirst($value["status_pembelian"]);
-                                }
-                                ?>
-                                <span class="status-badge <?php echo $status_class; ?>">
-                                    <?php echo $status_label; ?>
-                                </span>
-                            </td>
-                            <td>
-                                <a href="detail_pembelian.php?id=<?php echo $value["id_pembelian"]; ?>" class="action-btn btn-detail">
-                                    <i class="bi bi-eye"></i> Detail
-                                </a>
-
-                                <?php 
-                                $id_pembelian = $value["id_pembelian"];
-                                $ambil_pembayaran = $koneksi -> query("SELECT * FROM pembayaran WHERE id_pembelian = '$id_pembelian'");
-                                $pembayaran = $ambil_pembayaran -> fetch_assoc();
-
-                                $ambil_pengiriman = $koneksi -> query("SELECT * FROM pengiriman WHERE id_pembelian= '$id_pembelian'");
-                                $pengiriman = $ambil_pengiriman->fetch_assoc();
-
-                                $ambil_detail = $koneksi -> query("SELECT * FROM pembelian_produk LEFT JOIN produk ON produk.id_produk = pembelian_produk.id_produk WHERE id_pembelian = '$id_pembelian'");
-                                $produk = $ambil_detail->fetch_assoc();
-                                ?>
-
-                                <?php if ($value["status_pembelian"]=="batal" OR $value["status_pembelian"]=="selesai"): ?>
-                                    <?php if ($value["status_pembelian"]=="selesai"): ?>
-                                        <a href="testimoni.php?id=<?php echo $value['id_pembelian']; ?>" class="action-btn btn-review">
-                                            <i class="bi bi-star"></i> Tinjauan
-                                        </a>
-                                    <?php endif ?>
-                                <?php else: ?>
-                                    <?php if (!isset($pembayaran)): ?>
-                                        <a href="pembayaran.php?id=<?php echo $value["id_pembelian"]; ?>" class="action-btn btn-payment">
-                                            <i class="bi bi-credit-card"></i> Bayar Sekarang
-                                        </a>
-                                    <?php else: ?>
-                                        <a href="pembayaran.php?id=<?php echo $value["id_pembelian"]; ?>" class="action-btn btn-payment">
-                                            <i class="bi bi-credit-card"></i> Pembayaran
-                                        </a>
-                                        <a href="pengiriman.php?id=<?php echo $value["id_pembelian"]; ?>" class="action-btn btn-shipping">
-                                            <i class="bi bi-truck"></i> Pengiriman
-                                        </a>
-                                    <?php endif ?>
-                                <?php endif ?>
+                            <td colspan="7" class="text-center py-4">
+                                <div class="alert alert-info mb-0">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    Belum ada riwayat pesanan.
+                                </div>
                             </td>
                         </tr>
-                    <?php endforeach ?>
+                    <?php else: ?>
+                        <?php foreach ($pembelian as $key => $value): ?>
+                            <tr>
+                                <td>
+                                    <span class="order-id">#<?php echo $value["id_pembelian"]; ?></span>
+                                </td>
+                                <td class="date-cell">
+                                    <?php echo date("d M Y, H:i", strtotime($value["tanggal_pembelian"])); ?>
+                                </td>
+                                <td class="date-cell">
+                                    <?php if ($value['metode_pembayaran'] == "transfer"): ?>
+                                        <?php echo date("d M Y, H:i", strtotime($value["batas_pembayaran"])); ?>
+                                    <?php else: ?>
+                                        <span class="payment-info">Pay on delivery</span>
+                                    <?php endif ?>
+                                </td>
+                                <td>
+                                    <span class="total-amount">Rp <?php echo number_format($value["total_pembelian"]); ?></span>
+                                </td>
+                                <td class="method-cell">
+                                    <?php echo strtoupper($value["metode_pembayaran"]); ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                    $status_class = '';
+                                    $status_label = '';
+                                    switch($value["status_pembelian"]) {
+                                        case 'pending':
+                                            $status_class = 'status-pending';
+                                            $status_label = 'Pending';
+                                            break;
+                                        case 'lunas':
+                                            $status_class = 'status-lunas';
+                                            $status_label = 'Lunas';
+                                            break;
+                                        case 'kirim':
+                                            $status_class = 'status-kirim';
+                                            $status_label = 'Dikirim';
+                                            break;
+                                        case 'selesai':
+                                            $status_class = 'status-selesai';
+                                            $status_label = 'Selesai';
+                                            break;
+                                        case 'batal':
+                                            $status_class = 'status-batal';
+                                            $status_label = 'Batal';
+                                            break;
+                                        default:
+                                            $status_class = 'status-pending';
+                                            $status_label = ucfirst($value["status_pembelian"]);
+                                    }
+                                    ?>
+                                    <span class="status-badge <?php echo $status_class; ?>">
+                                        <?php echo $status_label; ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <!-- Tombol Detail (Selalu Tampil) -->
+                                        <a href="detail_pembelian.php?id=<?php echo $value["id_pembelian"]; ?>" 
+                                           class="action-btn btn-detail"
+                                           title="Lihat detail pesanan">
+                                            <i class="bi bi-eye"></i> Detail
+                                        </a>
+
+                                        <?php 
+                                        $id_pembelian = $value["id_pembelian"];
+                                        
+                                        // Cek pembayaran
+                                        $ambil_pembayaran = $koneksi->query("SELECT * FROM pembayaran WHERE id_pembelian = '$id_pembelian'");
+                                        $pembayaran = $ambil_pembayaran->fetch_assoc();
+                                        
+                                        // Cek pengiriman
+                                        $ambil_pengiriman = $koneksi->query("SELECT * FROM pengiriman WHERE id_pembelian = '$id_pembelian'");
+                                        $pengiriman = $ambil_pengiriman->fetch_assoc();
+                                        ?>
+                                        
+                                        <?php if ($value["status_pembelian"] == "batal" || $value["status_pembelian"] == "selesai"): ?>
+                                            <?php if ($value["status_pembelian"] == "selesai"): ?>
+                                                <!-- Tombol Review untuk pesanan selesai -->
+                                                <a href="testimoni.php?id=<?php echo $value['id_pembelian']; ?>" 
+                                                   class="action-btn btn-review"
+                                                   title="Beri ulasan produk">
+                                                    <i class="bi bi-star"></i> Beri Ulasan
+                                                </a>
+                                            <?php endif ?>
+                                        <?php else: ?>
+                                            <?php if (!isset($pembayaran) && $value["status_pembelian"] == "pending"): ?>
+                                                <!-- Tombol Bayar untuk pending tanpa pembayaran -->
+                                                <a href="pembayaran.php?id=<?php echo $value["id_pembelian"]; ?>" 
+                                                   class="action-btn btn-payment"
+                                                   title="Lakukan pembayaran">
+                                                    <i class="bi bi-credit-card"></i> Bayar
+                                                </a>
+                                            <?php elseif (isset($pembayaran)): ?>
+                                                <!-- Tombol Pembayaran (sudah bayar) -->
+                                                <a href="pembayaran.php?id=<?php echo $value["id_pembelian"]; ?>" 
+                                                   class="action-btn btn-payment"
+                                                   title="Lihat bukti pembayaran">
+                                                    <i class="bi bi-credit-card"></i> Pembayaran
+                                                </a>
+                                                
+                                                <!-- Tombol Pengiriman (jika ada) -->
+                                                <?php if (isset($pengiriman)): ?>
+                                                    <a href="pengiriman.php?id=<?php echo $value["id_pembelian"]; ?>" 
+                                                       class="action-btn btn-shipping"
+                                                       title="Lacak pengiriman">
+                                                        <i class="bi bi-truck"></i> Pengiriman
+                                                    </a>
+                                                <?php endif ?>
+                                            <?php endif ?>
+                                        <?php endif ?>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+                    <?php endif ?>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
 <?php 
 include "footer.php";
 ?>

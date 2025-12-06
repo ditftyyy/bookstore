@@ -1,4 +1,4 @@
-Perancangan Sistem Informasi
+Perancangan Sistem Informasi Jejak Literasi
 
 Hak akses : 
 1.Admin
